@@ -4,10 +4,10 @@
   <form method="POST" action="/register" novalidate>
     <input type="hidden" name="_csrf" value="<%= csrfToken %>">
     <label>Name <input name="name" value="<%= values.name || '' %>" required></label>
-    <label>Email <input type="email" name="email" value="<%= values.email || '' %>" required></label>
-    <label>Password <input type="password" name="password" required></label>
+    <label>Email <input type="email" name="email" autocomplete="off" value="<%= values.email || '' %>" required></label>
+    <label>Password <input type="password" name="password" autocomplete="new-password" required></label>
     <small>Min 8 chars, with uppercase, lowercase and a number.</small>
-    <label>Confirm password <input type="password" name="confirm" required></label>
+    <label>Confirm password <input type="password" name="confirm" autocomplete="new-password" required></label>
     <button class="btn">Sign up</button>
   </form>
   <p>Already have an account? <a href="/login">Log in</a></p>
