@@ -2,7 +2,7 @@
 
 A complete user authentication system built with **Node.js, Express, MongoDB (Mongoose) and EJS**.
 
-**Live demo:** <PASTE DEPLOYMENT URL>
+**Live demo:** https://auth-app-crit.onrender.com
 
 ## Features
 Sign-up · Login · Logout · Password reset (email/token) · Server-side sessions stored in MongoDB · Form validation · Error handling · Protected routes (`/dashboard`)
