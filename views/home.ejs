@@ -1,0 +1,7 @@
+<%- include('header') %>
+<div class="card">
+  <h1>Authentication Demo</h1>
+  <p>Sign-up, login, logout, password reset and session management with Node.js, Express and MongoDB.</p>
+  <% if (!user) { %><p><a class="btn" href="/register">Get started</a></p><% } %>
+</div>
+<%- include('footer') %>

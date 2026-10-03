@@ -1,0 +1,12 @@
+<%- include('header') %>
+<div class="card">
+  <h1>Log in</h1>
+  <form method="POST" action="/login" novalidate>
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    <label>Email <input type="email" name="email" value="<%= values.email || '' %>" required></label>
+    <label>Password <input type="password" name="password" required></label>
+    <button class="btn">Log in</button>
+  </form>
+  <p><a href="/forgot-password">Forgot password?</a> · <a href="/register">Create account</a></p>
+</div>
+<%- include('footer') %>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auth App</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav>
+  <a class="brand" href="/">AuthApp</a>
+  <div>
+    <% if (user) { %>
+      <a href="/dashboard">Dashboard</a>
+      <form method="POST" action="/logout" class="inline">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <button class="link">Logout</button>
+      </form>
+    <% } else { %>
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+    <% } %>
+  </div>
+</nav>
+<main>
+<% if (flash) { %>
+  <div class="alert <%= flash.type %>">
+    <%= flash.message %>
+    <% if (flash.link) { %><br><a href="<%= flash.link %>"><%= flash.link %></a><% } %>
+  </div>
+<% } %>
+<% if (errors.length) { %>
+  <div class="alert error"><ul><% errors.forEach(function(e){ %><li><%= e %></li><% }) %></ul></div>
+<% } %>

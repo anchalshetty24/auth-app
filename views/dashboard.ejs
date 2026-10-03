@@ -1,0 +1,7 @@
+<%- include('header') %>
+<div class="card">
+  <h1>Dashboard</h1>
+  <p>Hello, <strong><%= user.name %></strong>! You are logged in as <%= user.email %>.</p>
+  <p>This page is a protected route – it redirects to login if you are not authenticated.</p>
+</div>
+<%- include('footer') %>

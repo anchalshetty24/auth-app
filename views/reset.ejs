@@ -1,0 +1,11 @@
+<%- include('header') %>
+<div class="card">
+  <h1>Set a new password</h1>
+  <form method="POST" action="/reset-password/<%= token %>" novalidate>
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    <label>New password <input type="password" name="password" required></label>
+    <label>Confirm password <input type="password" name="confirm" required></label>
+    <button class="btn">Update password</button>
+  </form>
+</div>
+<%- include('footer') %>
